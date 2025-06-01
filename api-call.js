@@ -15,7 +15,7 @@ function mapGestureToDirection(serverGesture) {
 async function getPredictedLabel(processed_t) {
   try {
     // Call the Flask API for prediction
-    const response = await fetch('http://127.0.0.1:5000/get_prediction', {
+    const response = await fetch('https://krpcggurmeiy.us-east-1.clawcloudrun.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
