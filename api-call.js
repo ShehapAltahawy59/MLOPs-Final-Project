@@ -3,11 +3,11 @@ function mapGestureToDirection(serverGesture) {
   const gestureMapping = {
     palm: "stop",       // Example: "palm" means stop
     like: "up",         // Example: "fist" means up
-    dis_like: "down",  // Example: "thumbs_up" means down
+    dislike: "down",  // Example: "thumbs_up" means down
     stop: "right",      // Example: "wave" means right
     stop_inverted: "left",      // Example: "point" means left
   };
-  
+
 
   return gestureMapping[serverGesture] || null; // Return mapped gesture or null if unmapped
 }
@@ -15,7 +15,7 @@ function mapGestureToDirection(serverGesture) {
 async function getPredictedLabel(processed_t) {
   try {
     // Call the Flask API for prediction
-    const response = await fetch('http://localhost:5000/get_prediction', {
+    const response = await fetch('http://127.0.0.1:5000/get_prediction', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
